@@ -21,8 +21,8 @@ function playSingleRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
-    console.log(playerSelection);
-    console.log(computerSelection);
+    // console.log(playerSelection);
+    // console.log(computerSelection);
 
     if (playerSelection === computerSelection) {
         return `It's the match! ${playerSelection} and ${computerSelection}`;
@@ -37,6 +37,35 @@ function playSingleRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = getComputerChoice();
-const computerSelection = getComputerChoice();
-console.log(playSingleRound(playerSelection,computerSelection));
+function game() {
+        let playerSelection;
+        let computerSelection;
+        let result;
+        let playerScore = 0;
+        let computerScore = 0;
+    for (let index = 0; index < 5; index++) {
+        playerSelection = prompt("Write down your choose!")
+        computerSelection = getComputerChoice();
+        result = playSingleRound(playerSelection, computerSelection);
+        //console.log(result);
+        if (result.includes("won")) {
+            playerScore++;
+        }
+        if (result.includes("lose")) {
+            computerScore++;
+        }
+    }
+    if (playerScore > computerScore) {
+        console.log(`You are the winner! ${playerScore}-${computerScore}`);
+    } else if (playerScore < computerScore) {
+        console.log(`Computer is the winner! ${computerScore}-${playerScore}`);
+    } else {
+        console.log(`It is a draw! ${playerScore}-${computerScore}`)
+    }
+}
+
+game();
+
+// const playerSelection = getComputerChoice();
+// const computerSelection = getComputerChoice();
+// console.log(playSingleRound(playerSelection,computerSelection));
