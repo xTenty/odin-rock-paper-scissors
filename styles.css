@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.gameBoard {
+    width: 1000px;
+    height: 500px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.gameInfo {
+    min-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    justify-self: flex-start;
+}
+
+.gameInfo > p {
+    font-weight: bold;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+}
